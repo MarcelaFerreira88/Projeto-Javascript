@@ -12,5 +12,24 @@
       "Hoje é seu aniversário? Pq você ta de parabéns! 10 de média"
 */
 function calcularMedia() {
+  const nota1 = paserFloat(document.getElementById('nota1').value)
+  const nota2 = paserFloat(document.getElementById('nota2').value)
+  const nota3 = paserFloat(document.getElementById('nota3').value)
+  const nota4 = paserFloat(document.getElementById('nota4').value)
+
+let media =(nota1+nota2+nota3+nota4)/4
+
+let mensagem = ""
+
+if (media === 0 ){
+  mensagem ="Infelizmente você zerou a prova :( "
+} 
+
+const situacaoAluna = document.createElement('p')
+const divMedias = document.getElementById("contentCalMedias")
+divMedias.appendChild(situacaoAluna)
+situacaoAluna.innerText = mensagem
+
+
 
 }

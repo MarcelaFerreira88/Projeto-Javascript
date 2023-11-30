@@ -12,8 +12,6 @@ function somar() {
 
  const total = numero1 + numero2
 
- document.querySelector(".resultado").setAttribute('id',"resultado")
- 
 
  const paragarafo = document.getElementById("resultadoSoma")
  const resultado = document.createElement('strong')
@@ -29,10 +27,12 @@ function subtrair() {
     const numero2= parseFloat(document.querySelector("#numero2Sub").value)
    
     const resultado = numero1 - numero2
-    document.getElementById("resultadoSub").innerHTML = resultado
 
-    botaoSubtrair.addEventListener('click',subtrair)
+    document.getElementById("resultadoSub").innerHTML = resultado
+ 
 }
+
+botaoSubtrair.addEventListener('click',subtrair)
 
 function multiplicar() {
 
