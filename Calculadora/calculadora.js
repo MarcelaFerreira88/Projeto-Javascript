@@ -3,8 +3,8 @@
 2. Exibir o resultado na tela
 */
 
-const botaoSubtrair = document.getElementById("#subtrair")
-const botaoMultiplicar = document.getElementById("#multiplicar")
+const botaoSubtrair = document.getElementById("subtrair")
+const botaoMultiplicar = document.getElementById("multiplicar")
 
 function somar() {
  const numero1= parseFloat(document.querySelector("#numero1Soma").value)
@@ -32,12 +32,24 @@ function subtrair() {
  
 }
 
-botaoSubtrair.addEventListener('click',subtrair)
+
 
 function multiplicar() {
+    const numero1= parseFloat(document.querySelector("#numero1Mult").value)
+    const numero2= parseFloat(document.querySelector("#numero2Mult").value)
 
+    const total = numero1 * numero2
+
+    const paragrafo = document.querySelector("#resultadoMult")
+    const resultado = document.createElement('strong')
+    paragrafo.appendChild(resultado)
+    resultado.innerText = total
 }
 
 function dividir() {
 
 }
+
+
+botaoSubtrair.addEventListener('click', subtrair)
+botaoMultiplicar.addEventListener('click', multiplicar)
