@@ -43,6 +43,8 @@ else if (media >=10){
   mensagem = "Hoje é seu aniversário? Pq você ta de parabéns! 10 de média"
 }
 
+
+
 const situacaoAluna = document.createElement('p')
 const divMedias = document.getElementById("contentCalcMedias")
 divMedias.appendChild(situacaoAluna)
