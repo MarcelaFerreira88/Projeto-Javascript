@@ -47,6 +47,13 @@ function multiplicar() {
 }
 
 function dividir() {
+    const numero1= parseFloat(document.querySelector("#numero1Div").value)
+    const numero2= parseFloat(document.querySelector("#numero2Div").value)
+
+    const total = numero1 / numero2
+
+    document.getElementById("resultadoDiv").innerHTML = `Resultado : <strong>${total}</strong>`; 
+
 
 }
 
