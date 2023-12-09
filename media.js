@@ -14,6 +14,10 @@
 
 const botaoMedia = document.getElementById("btnSituacao")
 
+const situacaoAluna = document.createElement('p')
+const divMedias = document.getElementById("contentCalcMedias")
+divMedias.appendChild(situacaoAluna)
+
 function calcularMedia() {
   const nota1 = parseFloat(document.getElementById('nota1').value)
   const nota2 = parseFloat(document.getElementById('nota2').value)
@@ -26,6 +30,7 @@ let mensagem = ""
 
 if (media === 0 ){
   mensagem ="Infelizmente você zerou a prova :( "
+  
 }
  else if (media >= 0.1 && media <= 3){
   mensagem = `Caramba, deu ruim, você obteve media ${media}! Estude mais e tente novamente!`
@@ -45,9 +50,7 @@ else if (media >=10){
 
 
 
-const situacaoAluna = document.createElement('p')
-const divMedias = document.getElementById("contentCalcMedias")
-divMedias.appendChild(situacaoAluna)
+
 situacaoAluna.innerText = mensagem
 
 }

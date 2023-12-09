@@ -7,6 +7,7 @@ const botaoSubtrair = document.getElementById("subtrair")
 const botaoMultiplicar = document.getElementById("multiplicar")
 
 function somar() {
+    
  const numero1= parseFloat(document.querySelector("#numero1Soma").value)
  const numero2= parseFloat(document.querySelector("#numero2Soma").value)
 
@@ -17,6 +18,8 @@ function somar() {
  const resultado = document.createElement('strong')
  paragarafo.appendChild(resultado)
  resultado.innerText = total
+
+
 
 }
 
