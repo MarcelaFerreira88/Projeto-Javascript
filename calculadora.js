@@ -6,10 +6,6 @@
 const botaoSubtrair = document.getElementById("subtrair")
 const botaoMultiplicar = document.getElementById("multiplicar")
 
-//Somar
-const paragarafo = document.getElementById("resultadoSoma")
-const resultado = document.createElement('strong')
-paragarafo.appendChild(resultado)
 
 function somar() {
     
@@ -18,9 +14,21 @@ function somar() {
 
  const total = numero1 + numero2
 
+ const paragrafo = document.getElementById("resultadoSoma")
 
- resultado.innerText = total
+ paragrafo.innerHTML = ''
+ 
+ 
+ const resultado = document.createElement('strong');
+    resultado.innerText = total
+ 
+
+    paragrafo.innerText = 'Resultado: '
+    paragrafo.appendChild(resultado)
+
+
 }
+
 
 
 function subtrair() {
@@ -41,9 +49,15 @@ function multiplicar() {
     const total = numero1 * numero2
 
     const paragrafo = document.querySelector("#resultadoMult")
-    const resultado = document.createElement('strong')
-    paragrafo.appendChild(resultado)
+
+    paragrafo.innerHTML = ''
+    const resultado = document.createElement('strong');
     resultado.innerText = total
+
+
+    paragrafo.innerText = 'Resultado:'
+    paragrafo.appendChild(resultado)
+    
 }
 
 function dividir() {
